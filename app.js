@@ -9,6 +9,11 @@ app.use(bodyParser.json());
 
 let items = [];
 
+// Test
+app.get('/',(req,res)=>{
+    res.status(200).json({"message": "API working"})
+})
+
 // Create operation
 app.post('/items', (req, res) => {
     const newItem = req.body;
